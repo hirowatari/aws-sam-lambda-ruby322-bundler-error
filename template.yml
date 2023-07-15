@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: AWS Lambda Ruby 3.2 example
+
+Resources:
+  Ruby32Lambda:
+    Type: AWS::Serverless::Function
+    Description: 'Lambda function that uses the Ruby3.2 runtime'
+    Properties:
+      FunctionName: Ruby32Lambda
+      Handler: function.handler
+      Runtime: ruby3.2
+      CodeUri: src/
